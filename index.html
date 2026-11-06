@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Code Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Code Playground home"><span class="brand-mark">&lt;/&gt;</span> Code Playground</a>
+    <div class="actions">
+      <span id="status" class="status" role="status">Ready</span>
+      <button id="run-button" class="run-button" type="button">Run ▶</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="editors" aria-label="Code editors">
+      <div class="editor-panel">
+        <label for="html-code"><span class="dot html-dot"></span>HTML</label>
+        <textarea id="html-code" spellcheck="false" aria-label="HTML code" autocapitalize="off"></textarea>
+      </div>
+      <div class="editor-panel">
+        <label for="css-code"><span class="dot css-dot"></span>CSS</label>
+        <textarea id="css-code" spellcheck="false" aria-label="CSS code" autocapitalize="off"></textarea>
+      </div>
+      <div class="editor-panel">
+        <label for="js-code"><span class="dot js-dot"></span>JavaScript</label>
+        <textarea id="js-code" spellcheck="false" aria-label="JavaScript code" autocapitalize="off"></textarea>
+      </div>
+    </section>
+
+    <section class="preview-panel" aria-label="Live preview">
+      <div class="preview-heading"><span>Preview</span><button id="reset-button" class="reset-button" type="button">Reset example</button></div>
+      <iframe id="preview" title="Code preview" sandbox="allow-scripts"></iframe>
+    </section>
+  </main>
+  <footer>Your code stays in this browser session. Click <kbd>Run</kbd> or press <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Enter</kbd>.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
